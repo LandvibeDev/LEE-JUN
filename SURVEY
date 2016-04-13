@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>SURVEY</title>
+
+<script type="text/javascript">
+	function output(gender1, gender2, age1, age2, age3, age4, age5, job1, job2,
+			job3, job4, job5, job6, agency, cost1, cost2, cost3, cost4, year,
+			month, area) {
+		var outgender1 = document.getElementById(gender1).checked;
+		var outgender2 = document.getElementById(gender2).checked;
+		var outage1 = document.getElementById(age1).checked;
+		var outage2 = document.getElementById(age2).checked;
+		var outage3 = document.getElementById(age3).checked;
+		var outage4 = document.getElementById(age4).checked;
+		var outage5 = document.getElementById(age5).checked;
+		var outjob1 = document.getElementById(job1).checked;
+		var outjob2 = document.getElementById(job2).checked;
+		var outjob3 = document.getElementById(job3).checked;
+		var outjob4 = document.getElementById(job4).checked;
+		var outjob5 = document.getElementById(job5).checked;
+		var outjob6 = document.getElementById(job6).checked;
+		var outagency = document.getElementById(agency).value;
+		var outcost1 = document.getElementById(cost1).checked;
+		var outcost2 = document.getElementById(cost2).checked;
+		var outcost3 = document.getElementById(cost3).checked;
+		var outcost4 = document.getElementById(cost4).checked;
+		var outyear = document.getElementById(year).value;
+		var outmonth = document.getElementById(month).value;
+		var outtext = document.getElementById(area).value;
+
+		if (outgender1 == true) {
+			outgender1 = document.getElementById(gender1).value
+		} else if (outgender1 == false) {
+			outgender1 = ""
+		}
+		if (outgender2 == true) {
+			outgender2 = document.getElementById(gender2).value
+		} else if (outgender2 == false) {
+			outgender2 = ""
+		}
+
+		if (outage1 == true) {
+			outage1 = document.getElementById(age1).value
+		} else if (outage1 == false) {
+			outage1 = ""
+		}
+		if (outage2 == true) {
+			outage2 = document.getElementById(age2).value
+		} else if (outage2 == false) {
+			outage2 = ""
+		}
+		if (outage3 == true) {
+			outage3 = document.getElementById(age3).value
+		} else if (outage3 == false) {
+			outage3 = ""
+		}
+		if (outage4 == true) {
+			outage4 = document.getElementById(age4).value
+		} else if (outage4 == false) {
+			outage4 = ""
+		}
+		if (outage5 == true) {
+			outage5 = document.getElementById(age5).value
+		} else if (outage5 == false) {
+			outage5 = ""
+		}
+
+		if (outjob1 == true) {
+			outjob1 = document.getElementById(job1).value
+		} else if (outjob1 == false) {
+			outjob1 = ""
+		}
+		if (outjob2 == true) {
+			outjob2 = document.getElementById(job2).value
+		} else if (outjob2 == false) {
+			outjob2 = ""
+		}
+		if (outjob3 == true) {
+			outjob3 = document.getElementById(job3).value
+		} else if (outjob3 == false) {
+			outjob3 = ""
+		}
+		if (outjob4 == true) {
+			outjob4 = document.getElementById(job4).value
+		} else if (outjob4 == false) {
+			outjob4 = ""
+		}
+		if (outjob5 == true) {
+			outjob5 = document.getElementById(job5).value
+		} else if (outjob5 == false) {
+			outjob5 = ""
+		}
+		if (outjob6 == true) {
+			outjob6 = document.getElementById(job6).value
+		} else if (outjob6 == false) {
+			outjob6 = ""
+		}
+
+		if (outcost1 == true) {
+			outcost1 = document.getElementById(cost1).value + " "
+		} else if (outcost1 == false) {
+			outcost1 = ""
+		}
+		if (outcost2 == true) {
+			outcost2 = document.getElementById(cost2).value + " "
+		} else if (outcost2 == false) {
+			outcost2 = ""
+		}
+		if (outcost3 == true) {
+			outcost3 = document.getElementById(cost3).value + " "
+		} else if (outcost3 == false) {
+			outcost3 = ""
+		}
+		if (outcost4 == true) {
+			outcost4 = document.getElementById(cost4).value + " "
+		} else if (outcost4 == false) {
+			outcost4 = ""
+		}
+
+		alert("성별 : " + outgender1 + outgender2 + "\n연령대 : " + outage1
+				+ outage2 + outage3 + outage4 + outage5 + "\n직업 : " + outjob1
+				+ outjob2 + outjob3 + outjob4 + outjob5 + outjob6 + "\n통신사 : "
+				+ outagency + "\n요금제 : " + outcost1 + outcost2 + outcost3
+				+ outcost4 + "\n사용기간 : " + outyear + " " + outmonth
+				+ "\n불편사항 : " + outtext);
+	}
+</script>
+
+<style type="text/css">
+#home {
+	font-size: 70px;
+	font-weight: bold;
+	display: inline;
+	padding: 10px;
+}
+
+#where {
+	font-size: 35px;
+	font-weight: bold;
+	display: inline;
+	pdding: 10px;
+	margin-left: 10px;
+}
+
+#login {
+	font-size: 20px;
+	display: inline;
+	padding: 10px;
+	margin-left: 500px;
+}
+
+#sidebar {
+	font-size: 15px;
+	background-color: #eeeeee;
+	line-height: 25px;
+	width: 15%;
+	height: 300px;
+	float: left;
+	padding: 15px;
+	margin: 10px;
+}
+
+#topic {
+	font-size: 25px;
+	float: right;
+	width: 75%;
+	height: 50px;
+	padding: 5px;
+	margin-top: 15px;
+	margin-right: 70px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-width: medium;
+	border-style: solid
+}
+
+#content {
+	font-size: 15px;
+	float: right;
+	width: 75%;
+	padding: 5px;
+	margin-right: 70px;
+	border-width: 1px;
+}
+
+#gender1 {
+	margin-left: 35px;
+}
+
+#age1 {
+	margin-left: 35px;
+}
+
+#job1 {
+	margin-left: 35px;
+}
+
+#agency {
+	margin-left: 35px;
+}
+
+#cost1 {
+	margin-left: 35px;
+}
+
+#year {
+	margin-left: 35px;
+}
+
+#area {
+	margin-left: 35px;
+}
+
+#result {
+	margin-top: 50px;
+	margin-left: 35px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<span id="home"><a href="" target="_self"
+			style="text-decoration: none">HOME</a></span> <span id="where"><a
+			href="" target="_self" style="text-decoration: none">주제1</a></span> <span
+			id="login"><em>관리자 ID</em> :&nbsp;<input type="text"
+			width="30" name="id">&nbsp;&nbsp; <em>비밀번호</em> : <input
+			type="password" width="30" name="pw">&nbsp;<a href=""
+			target="_self"><em>login</em></a> </span>
+	</div>
+	<div id="sidebar">
+		<h4>
+			<a href="" target="_self" style="text-decoration: none">#전체 설문
+				보기(홈)</a>
+		</h4>
+		<p>
+			<a href="" target="_self" style="text-decoration: none">#주제1</a>
+		</p>
+		<p>
+			<a href="" target="_self" style="text-decoration: none">#주제2</a>
+		</p>
+		<p>
+			<a href="" target="_self" style="text-decoration: none">#주제3</a>
+		</p>
+		<p>
+			<a href="" target="_self" style="text-decoration: none">#주제4</a>
+		</p>
+		<p>
+			<a href="" target="_self" style="text-decoration: none">#주제5</a>
+		</p>
+	</div>
+	<form action="INPUT Form">
+
+		<div id="topic">주제1</div>
+		<div id="content">
+			<div>
+				<h3>Q1. 당신의 성별은?</h3>
+			</div>
+			<div>
+				<input type="radio" id="gender1" name="gender" value="남성">남성
+				<input type="radio" id="gender2" name="gender" value="여성">여성
+			</div>
+			<div>
+				<h3>Q2. 당신의 연령대는?</h3>
+			</div>
+			<div>
+				<input type="radio" id="age1" name="age" value="10대">10대 <input
+					type="radio" id="age2" name="age" value="20대">20대 <input
+					type="radio" id="age3" name="age" value="30대">30대 <input
+					type="radio" id="age4" name="age" value="40대">40대 <input
+					type="radio" id="age5" name="age" value="50대이상">50대이상
+			</div>
+			<div>
+				<h3>Q3. 당신의 직업은?</h3>
+			</div>
+			<div>
+				<input type="radio" id="job1" name="job" value="학생">학생 <input
+					type="radio" id="job2" name="job" value="직장인">직장인 <input
+					type="radio" id="job3" name="job" value="자영업">자영업 <input
+					type="radio" id="job4" name="job" value="주부">주부 <input
+					type="radio" id="job5" name="job" value="무직">무직 <input
+					type="radio" id="job6" name="job" value="기타">기타
+			</div>
+			<div>
+				<h3>Q4. 어떤 통신사를 이용 중이십니까?</h3>
+			</div>
+			<div>
+				<select style="width: 150px" id="agency">
+					<option value="SKT">SKT</option>
+					<option value="KT">KT</option>
+					<option value="LGT">LGT</option>
+				</select>
+			</div>
+			<div>
+				<h3>Q5. 요금제는 어떤 것을 이용중이십니까?</h3>
+			</div>
+			<div>
+				<input type="checkbox" id="cost1" name="cost" value="문자무제한">문자
+				무제한 <input type="checkbox" id="cost2" name="cost" value="통화무제한">통화
+				무제한 <input type="checkbox" id="cost3" name="cost" value="3G무제한">3G
+				무제한 <input type="checkbox" id="cost4" name="cost" value="LTE무제한">LTE
+				무제한
+			</div>
+			<div>
+				<h3>Q6. 핸드폰을 얼마나 사용하셨습니까?</h3>
+			</div>
+			<div>
+				<select id="year" size="5" style="width: 150px">
+					<option value="">0년</option>
+					<option value="1년">1년</option>
+					<option value="2년">2년</option>
+					<option value="3년">3년</option>
+					<option value="4년이상">기타</option>
+				</select> <select id="month" size="5" style="width: 250px" multiple>
+					<option value="1개월">1개월</option>
+					<option value="2개월">2개월</option>
+					<option value="3개월">3개월</option>
+					<option value="4개월">4개월</option>
+					<option value="5개월">5개월</option>
+					<option value="6개월">6개월</option>
+					<option value="7개월">7개월</option>
+					<option value="8개월">8개월</option>
+					<option value="9개월">9개월</option>
+					<option value="10개월">10개월</option>
+					<option value="11개월">11개월</option>
+				</select>
+			</div>
+			<div>
+				<h3>Q7. 핸드폰 사용 중 불편했던 점에 대해 자유롭게 적어주세요.</h3>
+			</div>
+			<div>
+				<textarea id="area" cols=75 rows=10></textarea>
+			</div>
+			<div id="result">
+				<input type="button" style="width: 100px" value="제출"
+					onclick="output('gender1','gender2','age1','age2','age3','age4','age5',
+							'job1','job2','job3','job4','job5','job6','agency',
+							'cost1','cost2','cost3','cost4','year','month','area')">
+				<input type="reset" style="width: 100px" value="새로 작성하기">
+			</div>
+		</div>
+
+	</form>
+</body>
+</html>
