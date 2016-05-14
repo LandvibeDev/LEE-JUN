@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RESULT</title>
+</head>
+<body>
+	<jsp:useBean id="survey" class="mybean.Survey" scope="session" />
+	<jsp:setProperty name="survey" property="*" />
+
+	<h2>설문조사 결과입니다</h2>
+	성별 :
+	<jsp:getProperty name="survey" property="gender" />
+	<br> 연령대 :
+	<jsp:getProperty name="survey" property="age" />
+	<br> 직업 :
+	<jsp:getProperty name="survey" property="job" />
+	<br> 통신사 :
+	<jsp:getProperty name="survey" property="agency" />
+	<br> 요금제 :
+	<jsp:getProperty name="survey" property="cost" />
+	<br> 사용기간 :
+	<jsp:getProperty name="survey" property="year" />
+	<jsp:getProperty name="survey" property="month" />
+	<br> 불편했던 점 :
+	<jsp:getProperty name="survey" property="area" />
+	<br>
+
+</body>
+</html>
